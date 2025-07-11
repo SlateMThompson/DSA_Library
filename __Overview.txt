@@ -1,0 +1,136 @@
+! This project is now finished and is no longer being actively developed !
+
+Overview:
+        This folder is a series of C++ files that hold classes to several common data structures
+
+        You can import all data structures by importing this folder and using the following line
+
+                #include "DataStructures.hpp"
+
+        !!! These data structures are not optimized for security
+
+        run .Test_Results.exe in a console to see results of runTests.cpp
+
+Classes:
+    Note: these uml diagrams are AI generated from a quick file scan and i have not thoroughly checked them. there could be errors.
+
+    UniNode<T>
+        +-------------------+
+        |  value : T        |
+        |  next : UniNode*  |
+        +-------------------+
+        | +getValue()       |
+        | +getNext()        |
+        | +setValue(T)      |
+        | +setNext(UniNode*)|
+        | +unlink()         |
+        +-------------------+
+
+    BiNode<T>
+        +-----------------------------+
+        |  value : T                  |
+        |  next : BiNode*             |
+        |  prev : BiNode*             |
+        +-----------------------------+
+        | +getValue()                 |
+        | +getNext()                  |
+        | +getPrev()                  |
+        | +setValue(T)                |
+        | +setNext(BiNode*)           |
+        | +setPrev(BiNode*)           |
+        | +unlink()                   |
+        +-----------------------------+
+
+    LinkList<T>
+        +-----------------------------+
+        |  head : UniNode<T>*         |
+        |  listLength : int           |
+        +-----------------------------+
+        | +getListLength()            |
+        | +getHead()                  |
+        | +isEmpty()                  |
+        | +getNodeAt(int)             |
+        | +getValueAt(int)            |
+        | +insertNode(UniNode*,int)   |
+        | +removeNode(int)            |
+        | +deleteNode(int)            |
+        | +moveNode(int,int)          |
+        | +printList()                |
+        +-----------------------------+
+
+    BiLinkList<T>
+        +-----------------------------+
+        |  head : BiNode<T>*          |
+        |  listLength : int           |
+        +-----------------------------+
+        | +getListLength()            |
+        | +getHead()                  |
+        | +isEmpty()                  |
+        | +getNodeAt(int)             |
+        | +getValueAt(int)            |
+        | +insertNode(BiNode*,int)    |
+        | +removeNode(int)            |
+        | +deleteNode(int)            |
+        | +moveNode(int,int)          |
+        | +printList()                |
+        +-----------------------------+
+
+    Stack<T>
+        +-----------------------------+
+        |  top : UniNode<T>*          |
+        |  stackLength : int          |
+        +-----------------------------+
+        | +getStackLength()           |
+        | +getTop()                   |
+        | +isEmpty()                  |
+        | +peek()                     |
+        | +push(T)                    |
+        | +pop()                      |
+        | +discard()                  |
+        +-----------------------------+
+
+    Queue<T>
+        +-----------------------------+
+        |  front : UniNode<T>*        |
+        |  back : UniNode<T>*         |
+        |  queueLength : int          |
+        +-----------------------------+
+        | +getFront()                 |
+        | +getBack()                  |
+        | +getQueueLength()           |
+        | +isEmpty()                  |
+        | +peek()                     |
+        | +add(UniNode*)              |
+        | +take()                     |
+        | +discard()                  |
+        +-----------------------------+
+
+    KVpair<T>
+        +-----------------------------+
+        |  key   : int                |
+        |  value : T                  |
+        +-----------------------------+
+        | +getKey()                   |
+        | +getValue()                 |
+        | +setKey(int)                |
+        | +setValue(T)                |
+        +-----------------------------+
+
+    HashTable<T>
+        +---------------------------------------------+
+        |  bucketCount : int                          |
+        |  table : LinkList<KVpair<T>>*               |
+        |  hashingFunction : int(*)(int, HashTable*)  |
+        +---------------------------------------------+
+        | +getBucketCount()                           |
+        | +getTable()                                 |
+        | +isEmpty()                                  |
+        | +lookupEntry(int)                           |
+        | +printTable()                               |
+        | +setBucketCount(int)                        |
+        | +setTable(LinkList<KVpair<T>>*)             |
+        | +setHashingFunction(int(*)(int, HashTable*))|
+        | +insertEntry(const KVpair<T>&)              |
+        | +removeEntry(int)                           |
+        | +hash(int)                                  |
+        +---------------------------------------------+
