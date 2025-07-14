@@ -1,0 +1,35 @@
+   _ _ O v e r v i e w . t x t
+
+DSA Library
+Author: Slate Thompson
+Email: popyoCode@gmail.com
+prof. Email: SlateMThompson
+
+Overview:
+   This library provides a suite of Data Structures and Algorithms for convenient use
+   in C++.
+
+   Data Structures:
+      Node (Base data handler for this library)
+      
+      Linked Lists               Stacks                  Queues
+
+      Hash Table                 *Binary Search Tree     *Avl Tree
+
+      *Tries                     *Graphs
+
+   Sorting Algorithms:
+      *Bubble Sorting            *Selection Sorting      *Insertion Sorting
+
+      *Merge Sorting             *Quick Sorting          *Count Sorting
+
+      *Bucket Sorting            *Radix Sorting
+
+   Searching Algorithms:
+      *Linear Searching          *Binary Searching       *Ternary Search
+
+      *Jump Search
+
+
+   * Being developed or to be implemented
+    
